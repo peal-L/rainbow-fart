@@ -1,0 +1,30 @@
+<view class='send-box'>
+  <image src='../../img/icon1.png'></image>
+  <input type='text' confirm-type='send' confirm-hold='true' cursor-spacing='10' bindconfirm='mySend' value='{{mySendValue}}'></input>
+  <image src='../../img/icon2.png'></image>
+  <image src='../../img/icon3.png' bindtap='test'></image>
+</view>
+
+<scroll-view class='chat-box' scroll-top='{{scrollLoca}}' style='height: {{height}}px' scroll-y >
+  <block wx:for='{{chatData}}'>
+    <view class='chat-content' wx:if='{{item.person == 0}}'>
+      <image class='chat-head' src='{{otherHead}}'></image>
+      <view class='chat-text'>
+        <view class='chat-text-arrow-b'></view>
+        <view class='chat-text-arrow'></view>
+        <view class='chat-text-text'>{{item.text}}</view>
+      </view>
+    </view>
+
+    <view class='chat-content chat-content-r' wx:if='{{item.person == 1}}'>
+      <view class='chat-text chat-text-r'>
+      <view style='position: absolute;right: -12px;'>
+        <view class='chat-text-arrow-b chat-text-arrow-b-r'></view>
+        <view class='chat-text-arrow chat-text-arrow-r'></view>
+        </view>
+        <view class='chat-text-text'>{{item.text}}</view>
+      </view>
+      <image class='chat-head' src='{{myHead}}'></image>
+    </view>
+  </block>
+</scroll-view>

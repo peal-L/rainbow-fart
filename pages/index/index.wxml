@@ -1,0 +1,28 @@
+<view id='data-box'>
+	<view class='left'>
+		<image src='{{otherHead}}' bindtap='chooseHead' data-type='1'></image>
+		<input maxlength='6' bindinput='inputValue' data-type='1' placeholder='对方的名字' value='{{otherName}}'></input>
+	</view>
+	<view class='right'>
+		<image src='{{myHead}}' bindtap='chooseHead' data-type='0'></image>
+		<input maxlength='6' bindinput='inputValue' data-type='0' placeholder='你的名字' value='{{myName}}'></input>
+	</view>
+</view>
+
+<view class="type">
+	<picker bindchange="typeChange" value="{{typeIndex}}" range="{{type}}">
+		<view class="picker">
+			类型： {{type[typeIndex]}}
+		</view>
+	</picker>
+</view>
+
+<view class='start' bindtap='goChat'>
+	<view class="start-inner">开始</view>
+</view>
+<view id='tips'>
+	<view>1. 点击头像可选择对方头像/你的头像（1:1）</view>
+	<view>2. 输入对方姓名/你的姓名</view>
+	<view>3. 选择屁类型</view>
+	<view>4. 点击开始接受疯狂彩虹屁吧(ಡωಡ)</view>
+</view>

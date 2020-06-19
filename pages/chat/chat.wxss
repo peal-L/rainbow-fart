@@ -1,0 +1,129 @@
+page {
+  background-color: #ebebeb;
+  font-size: 14px;
+}
+
+
+/* 去掉默认滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.send-box {
+  background-color: #f4f4f6;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+  border-top: 1px solid #E5E5E5
+}
+
+.send-box>image {
+  width: 28px;
+  height: 28px;
+  margin: 0 10px;
+}
+
+.send-box>image:last-child {
+  margin-left: 0;
+}
+
+.send-box>input {
+  display: inline-block;
+  background-color: #fcfcfc;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  height: 35px;
+  width: calc(100% - 134px);
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.chat-box {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.chat-content {
+  padding: 5px 10px 10px 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.chat-content:first-of-type {
+  padding-top: 10px;  
+}
+
+.chat-content-r {
+  justify-content: flex-end;
+}
+
+.chat-head {
+  width: 40px;
+  height: 40px;
+}
+
+.chat-text {
+  max-width: calc(100% - 115px);
+  display: inline-block;
+  position: relative;
+  background-color: #afe56e;
+  border: 1px solid #8ac15a;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.chat-text-r {
+  margin-left: 0px;
+  margin-right: 10px;
+  background-color: #ffffff;
+  border: 1px solid #DEDEDE;
+}
+
+.chat-text-arrow {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: solid;
+  border-color:  transparent #afe56e transparent transparent ;
+}
+
+.chat-text-arrow-b {
+  position: absolute;
+  top: 9px;
+  left: -12px;
+  width: 0;
+  height: 0;
+  border-width: 6px;
+  border-style: solid;
+  border-color:  transparent #8ac15a transparent transparent;
+}
+
+.chat-text-arrow-r {
+  top: 10px;
+  left: -12px;
+  border-color:  transparent transparent transparent #FFFFFF;
+}
+
+.chat-text-arrow-b-r {
+  top: 9px;
+  left: -12px;
+  border-color:  transparent transparent transparent #DEDEDE;
+}
+
+.chat-text-text {
+  min-height: 37px;
+  padding: 8px;
+  box-sizing: border-box;
+  color: #030402;
+}
